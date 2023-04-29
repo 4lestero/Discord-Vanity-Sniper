@@ -6,5 +6,5 @@
     - [Görseller](#görseller)
 
 
-#İçerik
+# İçerik
 - [x] Tamamen Self(Hesap) bot olup almak isteidğin url yi senin için kontrol eder.
