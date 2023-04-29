@@ -1,2 +1,10 @@
-# DiscordVanity Sniper
-TR: Discord da elte etmek istediğin url yi belirtiyorsun ve sunucudan url kaldırıldığı gibi sen alıyorsun!
+# Discord Vanity Sniper Anti-Ratelimit
+
+- [Discord Vanity Sniper](#discord-vanity-sniper-anti-ratelimit)
+    - [İçerik](#içerik)
+    - [Kurulum](#setup)
+    - [Görseller](#görseller)
+
+
+#İçerik
+- [x] Tamamen Self(Hesap) bot olup almak isteidğin url yi senin için kontrol eder.
