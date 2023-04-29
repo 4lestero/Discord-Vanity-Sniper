@@ -7,4 +7,4 @@
 
 
 # İçerik
-- [x] Tamamen Self(Hesap) bot olup almak isteidğin url yi senin için kontrol eder.
+- [x] Tamamen Self(Hesap) bot olup denetim kayıtını kontrol eder ve bu şekilde rate limiti ortadan kaldırır. Almak istediğiniz urlnin sunucusuna girmeniz gerekir!
