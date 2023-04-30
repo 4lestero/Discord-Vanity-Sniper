@@ -1,52 +1,51 @@
+const request = require('request');
 const { Client } = require('discord.js-selfbot-v13');
-const request = require('request')
-const User = new Client({checkUpdate: false});
+const Alestero = new Client({ checkUpdate: false });
 
-User.config = {
-    "Token": "Self Token",
-    "Server": "Url yi alacağınız sunucu",
-    "Url": "Almak istediğin url",
+Alestero.config = {
+    "Token": "ODU1ODY0NzI3NDM5NDA5MTY0.Gq-RLT.Albn-tS84nOiGH5J27Oehr73Ua5rn8S2YQyFpE",
+    "Server": "1091290846437064755",
+    "Url": "justicekingdom",
 };
 
-User.on("ready", async() => {
-    console.log( "(" + User.guilds.cache.get(User.config.Server).name + ") " + User.user.tag + " Giriş yaptı");
-})
-User.on("ready", async() => {
-    console.log( "(" + User.guilds.cache.get(User.config.Server).name + ") " + User.user.tag + " Giriş yaptı");
+Alestero.on("ready", async() => {
+  console.log( "(" + Alestero.guilds.cache.get(Alestero.config.Server).name + ") " + Alestero.user.tag + " Giriş yaptı");
+  spam();
+});
+
+Alestero.on("guildUpdate", async (oldGuild, newGuild) => {
+  if(newGuild.vanityURLCode !== oldGuild.vanityURLCode && oldGuild.vanityURLCode === Alestero.config.Url &&  newGuild.vanityURLCode !== Alestero.config.Url) {
+    console.log(Date.now());
     spam();
-})
-User.on("guildUpdate", async (oldGuild, newGuild) => {
-    if(newGuild.vanityURLCode !== oldGuild.vanityURLCode && oldGuild.vanityURLCode === User.config.Url &&  newGuild.vanityURLCode !== User.config.Url) {
-           console.log(Date.now())
- spam();
-    };
+  };
 });
 
 async function spam() {
-  if(User.guilds.cache.get(User.config.Server).vanityURLCode === User.config.Url) return;    
+  if(Alestero.guilds.cache.get(Alestero.config.Server).vanityURLCode === Alestero.config.Url) return;    
   console.log("denendi")
   const vuramk = {
-    url: `https://discord.com/api/v8/guilds/${User.config.Server}/vanity-url`,
+    url: `https://discord.com/api/v8/guilds/${Alestero.config.Server}/vanity-url`,
     body: {
-      code: `${User.config.Url}`
+      code: `${Alestero.config.Url}`
     },
     json: true,
     method: 'PATCH',
     headers: {
-      "Authorization": `${User.config.Token}`
+      "Authorization": `${Alestero.config.Token}`
     }
   };
   request(vuramk, (err, res, body) => {
     if (err) {
-      return console.log(err);
+        console.log(vuramk)
+      console.log(err);
+      return;
     }
-  })
-         console.log(Date.now())
- if(User.guilds.cache.get(User.config.Server).vanityURLCode === User.config.Url) {
-        console.log("Url Alındı!");
-        User.config.Users.forEach(Id => {
-            User.users.cache.get(Id).send({ content: ` ${User.config.Url} urlsi sunucuya alındı!` }).catch({});
-        });
+    console.log(Date.now());
+    if(Alestero.guilds.cache.get(Alestero.config.Server).vanityURLCode === Alestero.config.Url) {
+      console.log("Url Alındı!");
+     
     }
-  }
-User.login(User.config.Token)
+  });
+}
+
+Alestero.login(Alestero.config.Token);
