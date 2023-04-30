@@ -3,9 +3,9 @@ const { Client } = require('discord.js-selfbot-v13');
 const Alestero = new Client({ checkUpdate: false });
 
 Alestero.config = {
-    "Token": "ODU1ODY0NzI3NDM5NDA5MTY0.Gq-RLT.Albn-",
-    "Server": "1091290846437064755",
-    "Url": "justicekingdom",
+    "Token": "Token",
+    "Server": "Url yi alacağınız sunucu id",
+    "Url": "url",
 };
 
 Alestero.on("ready", async() => {
