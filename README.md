@@ -1,5 +1,3 @@
-# Discord Vanity Sniper Anti-Ratelimit
-
 # Bilgilendirme
 - ANLAMAYACAK KADAR SALAKSANIZ KULLANMAYIN BİRADER
 # Görseller
